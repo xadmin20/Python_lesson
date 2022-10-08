@@ -92,6 +92,32 @@ def calc():
         calc()
 
 
-calc()
+# calc()
 
+# Задача 5 VERY HARD SORT необязательная
+# Задайте двумерный массив из целых чисел. Количество строк и столбцов задается с клавиатуры.
+# Отсортировать элементы по возрастанию слева направо и сверху вниз.
+# Например, задан массив:
+# 1 4 7 2
+# 5 9 10 3
+
+# После сортировки
+# 1 2 3 4
+# 5 7 9 10
+def sorted_list():
+    try:
+        a = []
+        for i in range(4):
+            a.append(int(input("A: ")))
+        b = []
+        for i in range(4):
+            b.append(int(input("B: ")))
+        print(sorted(a))
+        print(sorted(b))
+    except:
+        print("Введите числа")
+        sorted_list()
+
+
+sorted_list()
 
