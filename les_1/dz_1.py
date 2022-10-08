@@ -68,22 +68,22 @@ def calc():
         o = input("Поддерживаемые операции: +, -, /, *, mod, pow, div: ")
         b = float(input('b: '))
         if o == 'mod':
-            print(a%b)
+            print(a % b)
         elif o == 'pow':
-            print(a**b)
+            print(a ** b)
         elif o == 'div':
-            print(a//b)
+            print(a // b)
         elif o == '+':
-            print(a+b)
+            print(a + b)
         elif o == '-':
-            print(a-b)
+            print(a - b)
         elif o == '*':
-            print(a*b)
+            print(a * b)
         elif o == '/':
             if b == 0:
                 print('Деление на 0!')
             else:
-                print(a/b)
+                print(a / b)
         else:
             print("Введите число или правильную операцию")
             calc()
@@ -119,5 +119,26 @@ def sorted_list():
         sorted_list()
 
 
-sorted_list()
+# sorted_list()
 
+def sorted_two():
+    a = []
+    b = []
+    for i in range(4):
+        a.append(int(input("A: ")))
+    for i in range(4):
+        b.append(int(input("B: ")))
+    for i in range(len(a)):
+        for j in range(i + 1, len(a)):
+            if a[i] > a[j]:
+                a[i], a[j] = a[j], a[i]
+
+    for i in range(len(b)):
+        for j in range(i + 1, len(b)):
+            if b[i] > b[j]:
+                b[i], b[j] = b[j], b[i]
+
+    print(a)
+    print(b)
+
+sorted_two()
