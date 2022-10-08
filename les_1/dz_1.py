@@ -4,13 +4,17 @@
 # - 7 -> да
 # - 1 -> нет
 def num_week():
-	day = int(input('Введите номер дня недели: '))
-	if 5 < day < 8:
-		print('да')
-	elif 0 < day < 6:
-		print('нет')
-	else:
-		print('попробуй ввести от 1 до 7 включительно')
+	try:
+		day = int(input('Введите номер дня недели: '))
+		if 5 < day < 8:
+			print('да')
+		elif 0 < day < 6:
+			print('нет')
+		else:
+			print('попробуй ввести от 1 до 7 включительно')
+	except:
+		print("Необходимо ввести номер дня недели!")
+		num_week()
 
 
 num_week()
