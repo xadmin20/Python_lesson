@@ -21,4 +21,29 @@ def digit(n):
         l.append(s)
     return l
 
-print(digit(int(input("Введите число: "))))
+# print(digit(int(input("Введите число: "))))
+
+
+# Задача 3. Напишите программу, в которой пользователь будет задавать две строки, 
+# а программа - определять количество вхождений одной строки в другой. 
+# COUNT или FIND нельзя юзать! говорил же на семинаре.
+
+def count_to_str():
+    a = str(input("A: "))
+    b = str(input("B: "))
+    count = 0
+    answ = ''
+    if len(a) >= len(b):
+        for i in range(len(a)):
+            if a[i] in b:
+                answ = " ".join(a[i])
+                count += 1
+    else:
+        for j in range(len(b)):
+            if b[j] in a:
+                answ = " ".join((b[j]))
+                count += 1
+
+    return f'Вхождений: {count}'
+
+# print(count_to_str())
