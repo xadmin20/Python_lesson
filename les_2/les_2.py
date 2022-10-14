@@ -11,4 +11,14 @@ def suma(n):
             s += int(i)
     return f"{n} -> {s}"
 
-print(suma(input("ВВедите число: ")))
+# print(suma(input("Введите число: ")))
+
+def digit(n):
+    s = 1
+    l = []
+    for i in range(1, n+1):
+        s=s*i
+        l.append(s)
+    return l
+
+print(digit(int(input("Введите число: "))))
