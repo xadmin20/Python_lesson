@@ -34,5 +34,30 @@ def mult_lst(lst):
     return new_lst
 
 
-print(mult_lst(l_1))
-print(mult_lst(l_2))
+# print(mult_lst(l_1))
+# print(mult_lst(l_2))
+
+# Задача 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+#
+# *Пример:*
+#
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+lst = [1.1, 1.2, 3.1, 5, 10.01]
+
+
+def max_min(lst):
+    max_list = []
+    for i in lst:
+        if float(i) % 1 != 0:
+            max_list.append(round(i%1, 2))
+    return max(max_list) - min(max_list)
+
+
+print(max_min(lst))
+
+
+
+
+
+
+
